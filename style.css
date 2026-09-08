@@ -1120,53 +1120,117 @@ a {
 
 }
 
-/* Estilos da Seção Localização */
+
+```
+```css
+/* =========================
+   LOCALIZAÇÃO
+========================= */
+
 .localizacao-section {
-    padding: 60px 20px;
-    background-color: #121212;
-    color: #ffffff;
+    background: var(--bg-light);
+    padding: 110px 0;
     text-align: center;
 }
 
 .localizacao-section h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #d4af37; /* Tom dourado clássico de barbearia */
+    font-family: "Playfair Display", serif;
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
 }
 
-.localizacao-section p {
-    color: #cccccc;
-    margin-bottom: 25px;
+.localizacao-section > .container > p {
+    max-width: 550px;
+    margin: 0 auto 45px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
 }
 
 .endereco-box {
-    background-color: #1e1e1e;
-    border: 1px solid #333333;
-    padding: 30px;
-    border-radius: 8px;
-    max-width: 600px;
+    max-width: 760px;
     margin: 0 auto;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    padding: 40px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    position: relative;
+    transition: .35s ease;
+}
+
+.endereco-box:hover {
+    border-color: rgba(201, 169, 106, .55);
+    transform: translateY(-5px);
 }
 
 .endereco-box p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
     margin-bottom: 15px;
-    font-size: 1.1rem;
+}
+
+.endereco-box p:last-of-type {
+    margin-bottom: 30px;
+}
+
+.endereco-box strong {
+    color: var(--gold);
+    font-weight: 700;
 }
 
 .btn-como-chegar {
-    display: inline-block;
-    background-color: #25d366; /* Ou mude para o tom de sua preferência, ex: #d4af37 */
-    color: #ffffff;
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 15px;
-    transition: background 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0 28px;
+    background: var(--gold);
+    color: #111;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    transition: .3s ease;
 }
 
 .btn-como-chegar:hover {
-    background-color: #1ebe5d;
+    background: var(--gold-light);
+    transform: translateY(-3px);
 }
+
+/* =========================
+   LOCALIZAÇÃO — MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .localizacao-section {
+        padding: 80px 0;
+    }
+
+    .localizacao-section h2 {
+        font-size: 48px;
+    }
+
+    .localizacao-section > .container > p {
+        font-size: 13px;
+        margin-bottom: 35px;
+    }
+
+    .endereco-box {
+        padding: 30px 22px;
+    }
+
+    .endereco-box p {
+        font-size: 12px;
+    }
+
+    .btn-como-chegar {
+        width: 100%;
+        padding: 0 15px;
+        text-align: center;
+    }
+}
+```
