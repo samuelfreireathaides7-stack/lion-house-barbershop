@@ -1119,3 +1119,54 @@ a {
     }
 
 }
+
+/* Estilos da Seção Localização */
+.localizacao-section {
+    padding: 60px 20px;
+    background-color: #121212;
+    color: #ffffff;
+    text-align: center;
+}
+
+.localizacao-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #d4af37; /* Tom dourado clássico de barbearia */
+}
+
+.localizacao-section p {
+    color: #cccccc;
+    margin-bottom: 25px;
+}
+
+.endereco-box {
+    background-color: #1e1e1e;
+    border: 1px solid #333333;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.endereco-box p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.btn-como-chegar {
+    display: inline-block;
+    background-color: #25d366; /* Ou mude para o tom de sua preferência, ex: #d4af37 */
+    color: #ffffff;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.btn-como-chegar:hover {
+    background-color: #1ebe5d;
+}
