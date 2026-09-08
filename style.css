@@ -1120,117 +1120,115 @@ a {
 
 }
 
+/* ================= LOCALIZAÇÃO ================= */
 
-```
-```css
-/* =========================
-   LOCALIZAÇÃO
-========================= */
-
-.localizacao-section {
-    background: var(--bg-light);
-    padding: 110px 0;
-    text-align: center;
+.location {
+    background: #0b0b0b;
 }
 
-.localizacao-section h2 {
-    font-family: "Playfair Display", serif;
-    font-size: clamp(42px, 6vw, 68px);
-    line-height: 1;
-    font-weight: 600;
-    letter-spacing: -1px;
-    margin-bottom: 20px;
+.location-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
 }
 
-.localizacao-section > .container > p {
-    max-width: 550px;
-    margin: 0 auto 45px;
-    color: var(--muted);
-    font-size: 14px;
+.location-text {
+    max-width: 500px;
+}
+
+.location-text h2 {
+    margin-bottom: 25px;
+}
+
+.location-address {
+    color: #aaa;
     line-height: 1.8;
-}
-
-.endereco-box {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 40px;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    position: relative;
-    transition: .35s ease;
-}
-
-.endereco-box:hover {
-    border-color: rgba(201, 169, 106, .55);
-    transform: translateY(-5px);
-}
-
-.endereco-box p {
-    color: var(--muted);
-    font-size: 13px;
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
-.endereco-box p:last-of-type {
     margin-bottom: 30px;
 }
 
-.endereco-box strong {
-    color: var(--gold);
-    font-weight: 700;
-}
-
-.btn-como-chegar {
+.location-button {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    min-height: 50px;
-    padding: 0 28px;
-    background: var(--gold);
-    color: #111;
-    font-size: 10px;
-    font-weight: 800;
+    gap: 18px;
+    padding: 14px 22px;
+    border: 1px solid rgba(201, 166, 91, 0.5);
+    color: #c9a65b;
+    font-size: 12px;
+    font-weight: 700;
     letter-spacing: 1.5px;
-    transition: .3s ease;
+    transition: all 0.3s ease;
 }
 
-.btn-como-chegar:hover {
-    background: var(--gold-light);
+.location-button span {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.location-button:hover {
+    background: #c9a65b;
+    color: #0b0b0b;
+    border-color: #c9a65b;
     transform: translateY(-3px);
 }
 
-/* =========================
-   LOCALIZAÇÃO — MOBILE
-========================= */
-
-@media (max-width: 600px) {
-
-    .localizacao-section {
-        padding: 80px 0;
-    }
-
-    .localizacao-section h2 {
-        font-size: 48px;
-    }
-
-    .localizacao-section > .container > p {
-        font-size: 13px;
-        margin-bottom: 35px;
-    }
-
-    .endereco-box {
-        padding: 30px 22px;
-    }
-
-    .endereco-box p {
-        font-size: 12px;
-    }
-
-    .btn-como-chegar {
-        width: 100%;
-        padding: 0 15px;
-        text-align: center;
-    }
+.location-map {
+    height: 360px;
+    overflow: hidden;
 }
-```
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(
+            rgba(12, 12, 12, 0.88),
+            rgba(12, 12, 12, 0.88)
+        ),
+        url("imagem3.jpg") center/cover no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.map-icon {
+    font-size: 42px;
+    color: #c9a65b;
+    margin-bottom: 10px;
+}
+
+.map-placeholder strong {
+    color: #fff;
+    font-size: 17px;
+}
+
+.map-placeholder span:last-child {
+    color: #888;
+    font-size: 13px;
+}
+
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 768px) {
+
+    .location-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .location-text {
+        max-width: 100%;
+    }
+
+    .location-map {
+        height: 280px;
+    }
+
+}
